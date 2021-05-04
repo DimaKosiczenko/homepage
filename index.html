@@ -25,7 +25,6 @@
   <meta property="og:title" content="Grzegorz Brzęczyszczykiewicz &mdash; Résumé">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimakosiczenko.github.io/homepage/">
-  <title>Volodymyr Kushnir &mdash; Résumé</title>
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="me" href="tel:+VeryOldAndBlack">
   <link rel="stylesheet" href="./assets/stylesheets/base.css">
@@ -40,7 +39,7 @@
             <div class="three wide center aligned column">
               <!-- Avatar -->
               <div class="avatar-wrapper">
-                <p class="avatar"> <img src="./assets/images/avatar.jpg" alt="Avatar"></p>
+                <p class="avatar"> <img src="./assets/images/avatar.jpg" alt="Avatar" width="150px" height="150px"></p>
                 <!-- Avatar -->
               </div>
 
@@ -187,43 +186,43 @@
   </main>
 
   <div class="credits">
-    I was inspired too by <strong>Resume by Iryna Nezhynska</strong>
-    </a> &#x1f60d;
+    I was inspired too by <strong>Resume by Iryna Nezhynska</strong>&#x1f60d;
   </div>
 
-</body>
 
-<script>
-  var tag = document.createElement('script');
 
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '360',
-      width: '640',
-      videoId: 'AfKZclMWS1U',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-  }
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-  var done = false;
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(stopVideo, 6000);
-      done = true;
+  <script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: 'AfKZclMWS1U',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
     }
-  }
-  function stopVideo() {
-    player.stopVideo();
-  }
-</script>
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+    var done = false;
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 6000);
+        done = true;
+      }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+</body>
 
 </html>
